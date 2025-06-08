@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f0f4fc;
+}
+
+.container {
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #ffc0cb;
+}
+
+.title {
+  text-align: center;
+  color: deeppink;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+.masonry {
+  column-count: 4;
+  column-gap: 16px;
+}
+
+.masonry img {
+  width: 100%;
+  display: block;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  break-inside: avoid;
+  transition: transform 0.3s ease;
+}
+
+.masonry img:hover {
+  transform: scale(1.03);
+}
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .masonry {
+    column-count: 1;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Medium devices (tablets, 601px to 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .masonry {
+    column-count: 1;
+  }
+}
+
+/* Large devices (laptops, 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+/* Extra large screens (optional override, still 4 columns) */
+@media (min-width: 1025px) {
+  .masonry {
+    column-count: 4;
+  }
+}
